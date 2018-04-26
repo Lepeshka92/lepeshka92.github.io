@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="manifest" href="/manifest.json">
+  
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Запрудня">
+  <meta name="theme-color" content="#ffffff">
+    
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Запрудня">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  
+  <meta name="msapplication-navbutton-color" content="#fffffff">
+  <meta name="msapplication-starturl" content="/index.html">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+  <link rel="stylesheet" href="bulma.css">
+  <script type="text/javascript" src="//vk.com/js/api/openapi.js?153"></script>
+
+  <title>Запрудня из окна</title>
+</head>
+
+<body>
+
+  <nav id="navbar" class="navbar is-light">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="http://zaprudnya.tk">
+        <img src="logo.png" alt="Запрудня из окна">
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" data-target="navMenu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu" id="navMenu">
+      <a class="navbar-item" href="https://vk.com/overhearzp" target="_blank">Подслушано.Запрудня</a>
+      <a class="navbar-item" href="https://muzub.org/" target="_blank">Больница</a>
+      <a class="navbar-item" href="http://zaprudnya-adm.ru/" target="_blank">Администрация</a>
+      <a class="navbar-item" href="http://zaprudnya-adm.ru/?q=node/4554" target="_blank">Афиша</a>
+    </div>
+  </nav>
+
+  <br>
+
+  <div class="container">
+    
+    <div class="card">
+      <div class="card-content">
+        <div class="level">
+          <div class="level-item has-text-centered">
+            <div>
+              <p class="heading" id="wdesc">температура</p>
+              <p class="title" id="wtemp">?</p>
+            </div>
+          </div>
+          <div class="level-item has-text-centered">
+            <div>
+              <p class="heading">Влажность</p>
+              <p class="title" id="whmdt">?</p>
+            </div>
+          </div>
+          <div class="level-item has-text-centered">
+            <div>
+              <p class="heading">Ветер</p>
+              <p class="title" id="wwind">?</p>
+            </div>
+          </div>
+          <div class="level-item has-text-centered">
+            <div>
+              <p class="heading">Обновлено</p>
+              <p class="title" id="wdate">?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="tile is-ancestor">
+      <div class="tile is-parent">
+        <article class="tile is-child box">
+          <p class="title is-5">Прогноз погоды на пять суток</p>
+          <figure class="image">
+            <img src="https://www.foreca.ru/meteogram.php?loc_id=100464708&lang=ru" alt="">
+          </figure>
+        </article>
+      </div>
+      <div class="tile is-parent">
+        <article class="tile is-child box">
+          <p class="title is-5">Изображение с камеры на окне</p>
+          <figure class="image is-16by9" onclick="showImage()">
+            <img src="http://user77774.7ci.ru/current.jpg" alt=":-(">
+          </figure>
+        </article>
+      </div>
+      <div class="tile is-parent">
+        <article class="tile is-child box">
+          <p class="title is-5">События</p>
+          <p>
+            В Запрудне 73.66% избирателей отдали свои голоса за В.В. Путина.
+          </p>
+          <p>
+            <a href="http://telegra.ph/Lyzhnya-Zaprudni---2018-02-26" target="_blank">Лыжня Запрудни - 2018</a>
+          </p>
+          <p>
+            <a href="http://telegra.ph/Maslenica-v-pZaprudnya-02-18" target="_blank">Масленица 18 февраля 2018 года</a>
+          </p>
+        </article>
+      </div>
+    </div>
+    
+    <div class="tile is-ancestor">
+      <div class="tile is-parent">
+        <article class="tile is-child box">
+          <p class="title is-5">Расписание автобусов</p>
+          <div class="field has-addons">
+            <div class="control is-expanded">
+                <div class="select is-fullwidth">
+                <select name="city">
+                  <!-- Здесь будут направления -->
+                </select>
+                </div>
+            </div>
+            <div class="control">
+                <button id="btnShow" class="button is-info">Посмотреть</button>
+            </div>
+          </div>
+
+          <br>
+
+          <table class="table is-fullwidth is-narrow">
+          <thead>
+              <tr>
+                <th>Время</th>
+                <th>Автобус</th>
+                <th>Конечная</th>
+              </tr>
+          </thead>
+          <tbody>
+            <!-- Здесь будет расписание -->
+          </tbody>
+          </table>
+          
+          <br>
+          
+          <article class="message is-small">
+            <div class="message-body">
+              <p>* - маленький автобус; (б) - только по будням</p>
+              <p>расписание актуально на 09 апреля 2018 года</p>
+            </div>
+          </article>
+        </article>
+      </div>
+      
+      <div class="tile is-parent">
+        <article class="tile is-child box">
+          <p class="title is-5">Комментарии</p>
+          <div id="vk_comments"></div>
+        </article>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  <br>
+
+  <footer class="footer">
+      <p class="tags has-text-centered is-small">
+        <span class="tag is-link">zaprudnya.tk</span>
+        <span class="tag is-info">2018</span>
+        <span class="tag is-light" id="vk_like"></span>
+      </p>
+  </footer>
+  
+  <div class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <p class="image is-16by9">
+        <img src="http://user77774.7ci.ru/current.jpg" alt="">
+      </p>
+    </div>
+    <button onclick="hideImage()" class="modal-close is-large" aria-label="close"></button>
+  </div>
+  
+  <script src="http://user77774.7ci.ru/sensor1.js" defer></script>
+  <script src="http://user77774.7ci.ru/sensor2.js" defer></script>
+  <script src="app.js"></script>
+  <!-- Yandex.Metrika counter -->
+  <script>
+      (function (d, w, c) {
+          (w[c] = w[c] || []).push(function() {
+              try {
+                  w.yaCounter47100609 = new Ya.Metrika({
+                      id:47100609,
+                      clickmap:true,
+                      trackLinks:true,
+                      accurateTrackBounce:true
+                  });
+              } catch(e) { }
+          });
+  
+          var n = d.getElementsByTagName("script")[0],
+              s = d.createElement("script"),
+              f = function () { n.parentNode.insertBefore(s, n); };
+          s.type = "text/javascript";
+          s.async = true;
+          s.src = "https://mc.yandex.ru/metrika/watch.js";
+  
+          if (w.opera == "[object Opera]") {
+              d.addEventListener("DOMContentLoaded", f, false);
+          } else { f(); }
+      })(document, window, "yandex_metrika_callbacks");
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/47100609" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- Yandex.Metrika counter -->
+</body>
+</html>
