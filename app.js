@@ -93,7 +93,7 @@ function initialize()
     document.querySelector('#btnShow').onclick = btnClicked;
     document.querySelector('#wtemp').innerHTML = getT();
     document.querySelector('#whmdt').innerText = getH();
-    document.querySelector('#wdate').innerText = toDate(sensor_esp['date']).toLocaleString("ru", {hour: 'numeric', minute: 'numeric'});
+    //document.querySelector('#wdate').innerText = toDate(sensor_esp['date']).toLocaleString("ru", {hour: 'numeric', minute: 'numeric'});
     if(window.sensor_owm)
     {
         document.querySelector('#wwind').innerText = sensor_owm['wind']['speed'] + 'м/с';
