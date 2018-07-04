@@ -40,67 +40,15 @@ function loadNavbar()
     }
 }
 
-function getT()
-{
-    if(window.sensor_esp && sensor_esp['t3'])
-        if(tmDiff(sensor_esp['date']) < 3)
-            return +sensor_esp['t3'] + "&deg;";
-
-    if(window.sensor_owm && sensor_owm['main']['temp'])
-        return +sensor_owm['main']['temp'] + "&deg;";
-    
-    return "0&deg;";
-}
-
-function getH()
-{
-    if(window.sensor_esp && sensor_esp['h1'])
-        if(tmDiff(sensor_esp['date']) < 3)
-            return +sensor_esp['h1'] + "%";
-
-    if(window.sensor_owm && sensor_owm['main']['humidity'])
-        return +sensor_owm['main']['humidity']+ "%";
-}
-
-function toDate(date)
-{
-    var t = date.split(/[- :]/);
-    return new Date(t[0], t[1] - 1, t[2], t[3], t[4], t[5]);
-}
-
-function tmDiff(date)
-{
-    var d = toDate(date);
-    var n = new Date(Date.now());
-    return Math.floor(Math.abs(n - d) / 36e5);
-}
-
-function showImage()
-{
-    document.querySelector('.modal').classList.add('is-active');
-}
-
-function hideImage()
-{
-    document.querySelector('.modal').classList.remove('is-active');
-}
-
 function initialize()
 {
     loadNavbar();
     loadCities();
     
     document.querySelector('#btnShow').onclick = btnClicked;
-    document.querySelector('#wtemp').innerHTML = getT();
-    document.querySelector('#whmdt').innerText = getH();
-    //document.querySelector('#wdate').innerText = toDate(sensor_esp['date']).toLocaleString("ru", {hour: 'numeric', minute: 'numeric'});
-    if(window.sensor_owm)
-    {
-        document.querySelector('#wwind').innerText = sensor_owm['wind']['speed'] + 'м/с';
-        document.querySelector('#wdesc').innerText = sensor_owm['weather'][0]['description'];
-    }
+    
     VK.init({apiId: 6306483, onlyWidgets: true});
-    VK.Widgets.Comments("vk_comments", {limit: 5, attach: "*"});
+    VK.Widgets.Comments("vk_comments", {limit: 15, attach: "*"});
     VK.Widgets.Like("vk_like", {type: "mini", height: 24});
 }
 
