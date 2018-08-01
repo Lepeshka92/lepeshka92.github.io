@@ -7,7 +7,6 @@ function loadCities()
     }
     document.querySelector('select').innerHTML = tmp;
 }
-
 function btnClicked()
 {
     var tmp = '';
@@ -21,7 +20,6 @@ function btnClicked()
     }
     document.querySelector('tbody').innerHTML = tmp;
 }
-
 function loadNavbar()
 {
     var nbb = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
@@ -39,20 +37,19 @@ function loadNavbar()
         });
     }
 }
-
 function initialize()
 {
     loadNavbar();
     loadCities();
-    
+
     document.querySelector('#btnShow').onclick = btnClicked;
-    
+
     VK.init({apiId: 6306483, onlyWidgets: true});
     VK.Widgets.Comments("vk_comments", {limit: 15, attach: "*"});
-    VK.Widgets.Like("vk_like", {type: "mini", height: 24});
 }
 
 document.addEventListener("DOMContentLoaded", initialize);
+
 var raspisanie = {
     'Направление': [
         ['', '', '']
